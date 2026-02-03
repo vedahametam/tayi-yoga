@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 
 const menuItems = [
-	{ label: "Home", href: "#home" },
 	{ label: "Tayi Sadhana Yoga", href: "#tayi" },
 	{ label: "Programs", href: "#programs" },
 	{ label: "Volunteer", href: "#volunteer" },
@@ -163,10 +162,10 @@ function App() {
 				Skip to content
 			</a>
 			<header className="site-header">
-				<div className="brand">
+				<a className="brand" href="#home" aria-label="Tayi Sadhana Yoga home">
 					<span className="brand-mark">Tayi</span>
 					<span className="brand-text">Sadhana Yoga</span>
-				</div>
+				</a>
 				<button
 					className="menu-toggle"
 					type="button"
@@ -802,10 +801,46 @@ function App() {
 			</main>
 
 			<footer className="site-footer">
-				<p>
-					Tayi Sadhana Yoga - A living temple of peace, love, and life energy.
-				</p>
-				<p>Copyright 2026. All rights reserved.</p>
+				<div className="footer-grid">
+					<div className="footer-brand">
+						<p className="footer-mark">Tayi</p>
+						<p className="footer-title">Sadhana Yoga</p>
+						<p className="footer-description">
+							A living temple of peace, love, and life energy rooted in the Divine
+							Mother.
+						</p>
+					</div>
+					<div className="footer-column">
+						<p className="footer-heading">Explore</p>
+						<a href="#home">Home</a>
+						<a href="#tayi">Tayi Sadhana Yoga</a>
+						<a href="#programs">Programs</a>
+						<a href="#blog">Blog / Knowledge</a>
+					</div>
+					<div className="footer-column">
+						<p className="footer-heading">About</p>
+						<a href="#about">About Us</a>
+						<a href="#vision">Vision & Mission</a>
+						<a href="#founder">Founder's Message</a>
+						<a href="#volunteer">Volunteer</a>
+					</div>
+					<div className="footer-column">
+						<p className="footer-heading">Contact</p>
+						<p>Phone: +91 00000 00000</p>
+						<p>Email: connect@tayi-yoga.org</p>
+						<a className="footer-cta" href="#contact">
+							Plan a Visit
+						</a>
+					</div>
+				</div>
+				<div className="footer-bottom">
+					<p>Copyright 2026. All rights reserved.</p>
+					<div className="footer-links">
+						<a href="#donate">Donate</a>
+						<span aria-hidden="true">|</span>
+						<a href="#contact">Contact</a>
+					</div>
+				</div>
 			</footer>
 
 			{showTop && (

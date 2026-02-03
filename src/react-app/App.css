@@ -16,6 +16,7 @@
 	gap: 6rem;
 	position: relative;
 	isolation: isolate;
+	overflow-x: hidden;
 }
 
 .page::before,
@@ -70,6 +71,7 @@
 	background: rgba(254, 247, 234, 0.92);
 	backdrop-filter: blur(10px);
 	border-bottom: 1px solid rgba(155, 107, 67, 0.18);
+	width: 100%;
 }
 
 .brand {
@@ -77,6 +79,8 @@
 	flex-direction: column;
 	gap: 0.2rem;
 	font-family: "Cormorant Garamond", serif;
+	color: inherit;
+	min-width: 0;
 }
 
 .brand-mark {
@@ -94,6 +98,7 @@
 .site-nav {
 	display: flex;
 	align-items: center;
+	min-width: 0;
 }
 
 .nav-links {
@@ -103,6 +108,7 @@
 	font-size: 0.95rem;
 	color: rgba(28, 26, 25, 0.8);
 	align-items: center;
+	min-width: 0;
 }
 
 .nav-links a,
@@ -131,7 +137,7 @@
 
 .dropdown {
 	position: absolute;
-	top: 120%;
+	top: 100%;
 	left: 0;
 	background: #fffaf2;
 	border: 1px solid rgba(155, 107, 67, 0.2);
@@ -139,10 +145,15 @@
 	padding: 0.6rem;
 	min-width: 200px;
 	box-shadow: 0 18px 30px rgba(18, 16, 14, 0.2);
-	display: none;
+	display: flex;
 	flex-direction: column;
 	gap: 0.4rem;
 	z-index: 12;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(6px);
+	pointer-events: none;
+	transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .dropdown a {
@@ -157,7 +168,14 @@
 
 .nav-item.has-dropdown:hover .dropdown,
 .nav-item.has-dropdown:focus-within .dropdown {
-	display: flex;
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+	pointer-events: auto;
+}
+
+.nav-item.has-dropdown {
+	padding-bottom: 0.5rem;
 }
 
 .menu-toggle {
@@ -561,12 +579,93 @@ main {
 }
 
 .site-footer {
-	padding: 2rem 6vw 3rem;
+	padding: 3rem 6vw 2rem;
 	display: flex;
 	flex-direction: column;
-	gap: 0.4rem;
-	color: rgba(28, 26, 25, 0.65);
+	gap: 2.5rem;
+	background: rgba(255, 255, 255, 0.7);
+	border-top: 1px solid rgba(155, 107, 67, 0.2);
+	color: rgba(28, 26, 25, 0.7);
 	font-size: 0.95rem;
+}
+
+.footer-grid {
+	display: grid;
+	grid-template-columns: 1.2fr 1fr 1fr 1fr;
+	gap: 2rem;
+}
+
+.footer-brand {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.footer-mark {
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	font-weight: 700;
+	color: var(--leaf);
+	font-size: 0.85rem;
+}
+
+.footer-title {
+	font-family: "Cormorant Garamond", serif;
+	font-size: 1.6rem;
+	color: var(--ink);
+}
+
+.footer-description {
+	max-width: 280px;
+	color: rgba(28, 26, 25, 0.65);
+}
+
+.footer-column {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.footer-heading {
+	font-weight: 700;
+	color: var(--ink);
+	margin-bottom: 0.4rem;
+}
+
+.footer-column a {
+	color: rgba(28, 26, 25, 0.75);
+	transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+	color: var(--leaf);
+}
+
+.footer-cta {
+	margin-top: 0.6rem;
+	display: inline-flex;
+	padding: 0.5rem 1rem;
+	border-radius: 999px;
+	background: var(--leaf);
+	color: #fff !important;
+	font-weight: 600;
+	width: fit-content;
+}
+
+.footer-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	border-top: 1px solid rgba(155, 107, 67, 0.2);
+	padding-top: 1.2rem;
+	font-size: 0.9rem;
+}
+
+.footer-links {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
 }
 
 .back-to-top {
@@ -674,6 +773,7 @@ main {
 		gap: 0.8rem;
 		display: none;
 		padding-top: 0.5rem;
+		max-width: 100%;
 	}
 
 	.nav-links.open {
@@ -686,6 +786,10 @@ main {
 		border: none;
 		padding: 0.2rem 0 0.4rem;
 		background: transparent;
+		opacity: 1;
+		visibility: visible;
+		transform: none;
+		pointer-events: auto;
 	}
 
 	.hero {
@@ -707,6 +811,10 @@ main {
 	.grid.two,
 	.grid.three {
 		grid-template-columns: 1fr;
+	}
+
+	.footer-grid {
+		grid-template-columns: 1fr 1fr;
 	}
 
 	main {
@@ -732,5 +840,14 @@ main {
 	.back-to-top {
 		right: 1rem;
 		bottom: 1rem;
+	}
+
+	.footer-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.footer-bottom {
+		flex-direction: column;
+		align-items: flex-start;
 	}
 }
