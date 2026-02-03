@@ -3,15 +3,17 @@ import "./App.css";
 
 const menuItems = [
 	{ label: "Home", href: "#home" },
-	{ label: "About Us", href: "#about" },
 	{ label: "Tayi Sadhana Yoga", href: "#tayi" },
 	{ label: "Programs", href: "#programs" },
-	{ label: "Vision & Mission", href: "#vision" },
-	{ label: "Founder's Message", href: "#founder" },
-	{ label: "Donate", href: "#donate" },
 	{ label: "Volunteer", href: "#volunteer" },
 	{ label: "Blog / Knowledge", href: "#blog" },
 	{ label: "Contact Us", href: "#contact" },
+];
+
+const aboutDropdown = [
+	{ label: "About Us", href: "#about" },
+	{ label: "Vision & Mission", href: "#vision" },
+	{ label: "Founder's Message", href: "#founder" },
 ];
 
 const programs = [
@@ -77,6 +79,7 @@ const revealSelector = "[data-reveal]";
 function App() {
 	const [activeSection, setActiveSection] = useState("home");
 	const [showTop, setShowTop] = useState(false);
+	const [menuOpen, setMenuOpen] = useState(false);
 	const [selectedProgram, setSelectedProgram] = useState<(typeof programs)[number] | null>(
 		null,
 	);
@@ -85,7 +88,18 @@ function App() {
 	const [contactSubmitted, setContactSubmitted] = useState(false);
 
 	const sectionIds = useMemo(
-		() => menuItems.map((item) => item.href.replace("#", "")),
+		() => [
+			"home",
+			"about",
+			"tayi",
+			"programs",
+			"vision",
+			"founder",
+			"donate",
+			"volunteer",
+			"blog",
+			"contact",
+		],
 		[],
 	);
 
@@ -153,20 +167,63 @@ function App() {
 					<span className="brand-mark">Tayi</span>
 					<span className="brand-text">Sadhana Yoga</span>
 				</div>
+				<button
+					className="menu-toggle"
+					type="button"
+					onClick={() => setMenuOpen((open) => !open)}
+					aria-expanded={menuOpen}
+					aria-controls="primary-navigation"
+				>
+					Menu
+				</button>
 				<nav className="site-nav" aria-label="Main menu">
-					{menuItems.map((item) => {
-						const id = item.href.replace("#", "");
-						return (
-							<a
-								key={item.href}
-								href={item.href}
-								className={activeSection === id ? "active" : undefined}
-								aria-current={activeSection === id ? "page" : undefined}
+					<div
+						id="primary-navigation"
+						className={`nav-links ${menuOpen ? "open" : ""}`}
+					>
+						<div className="nav-item has-dropdown">
+							<button
+								className={`nav-button ${
+									["about", "vision", "founder"].includes(activeSection)
+										? "active"
+										: ""
+								}`}
+								type="button"
 							>
-								{item.label}
-							</a>
-						);
-					})}
+								About Us
+							</button>
+							<div className="dropdown">
+								{aboutDropdown.map((item) => {
+									const id = item.href.replace("#", "");
+									return (
+										<a
+											key={item.href}
+											href={item.href}
+											className={activeSection === id ? "active" : undefined}
+											aria-current={activeSection === id ? "page" : undefined}
+											onClick={() => setMenuOpen(false)}
+										>
+											{item.label}
+										</a>
+									);
+								})}
+							</div>
+						</div>
+						{menuItems.map((item) => {
+							const id = item.href.replace("#", "");
+							return (
+								<a
+									key={item.href}
+									href={item.href}
+									className={activeSection === id ? "active" : undefined}
+									aria-current={activeSection === id ? "page" : undefined}
+									onClick={() => setMenuOpen(false)}
+								>
+									{item.label}
+								</a>
+							);
+						})}
+					</div>
 				</nav>
 				<a className="nav-cta" href="#donate">
 					Donate
