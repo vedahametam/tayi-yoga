@@ -1,0 +1,380 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+  const [educationDropdownOpen, setEducationDropdownOpen] = useState(false);
+  const [systemDropdownOpen, setSystemDropdownOpen] = useState(false);
+  const [divineDropdownOpen, setDivineDropdownOpen] = useState(false);
+  const [certificationDropdownOpen, setCertificationDropdownOpen] = useState(false);
+  const [mediaDropdownOpen, setMediaDropdownOpen] = useState(false);
+
+  return (
+    <header className="sticky top-0 z-50 bg-sand/95 backdrop-blur-sm shadow-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="text-2xl font-serif font-bold text-earth">
+              Tayi Sadhana Yoga
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            <Link to="/" className="text-ink hover:text-earth transition-colors font-medium">
+              Home
+            </Link>
+
+            {/* About Us Dropdown */}
+            <div className="relative group">
+              <button
+                className="text-ink hover:text-earth transition-colors font-medium flex items-center"
+                onMouseEnter={() => setAboutDropdownOpen(true)}
+                onMouseLeave={() => setAboutDropdownOpen(false)}
+              >
+                About Us
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {aboutDropdownOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2"
+                  onMouseEnter={() => setAboutDropdownOpen(true)}
+                  onMouseLeave={() => setAboutDropdownOpen(false)}
+                >
+                  <Link to="/about/tayi-sadhana-yoga" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    About Tayi Sadhana Yoga
+                  </Link>
+                  <Link to="/about/sadhana-yogi" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Sadhana Yogi
+                  </Link>
+                  <Link to="/about/guruji-message" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Guruji's Message
+                  </Link>
+                  <Link to="/about/vision-mission" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Vision &amp; Mission
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Divine Project Dropdown */}
+            <div className="relative group">
+              <button
+                className="text-ink hover:text-earth transition-colors font-medium flex items-center"
+                onMouseEnter={() => setDivineDropdownOpen(true)}
+                onMouseLeave={() => setDivineDropdownOpen(false)}
+              >
+                Divine Project
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {divineDropdownOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2"
+                  onMouseEnter={() => setDivineDropdownOpen(true)}
+                  onMouseLeave={() => setDivineDropdownOpen(false)}
+                >
+                  <Link to="/divine-project/birth-of-mother" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Birth of the Mother
+                  </Link>
+                  <Link to="/divine-project/education-support" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Education Support
+                  </Link>
+                  <Link to="/divine-project/donation" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Donation
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Tayi Sadhana Yoga (System) Dropdown */}
+            <div className="relative group">
+              <button
+                className="text-ink hover:text-earth transition-colors font-medium flex items-center"
+                onMouseEnter={() => setSystemDropdownOpen(true)}
+                onMouseLeave={() => setSystemDropdownOpen(false)}
+              >
+                The System
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {systemDropdownOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2"
+                  onMouseEnter={() => setSystemDropdownOpen(true)}
+                  onMouseLeave={() => setSystemDropdownOpen(false)}
+                >
+                  <Link to="/system/tayi-culture" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Tayi Culture
+                  </Link>
+                  <Link to="/system/tayi-sadhana-yoga" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Tayi Sadhana Yoga
+                  </Link>
+                  <Link to="/system/nature-cure" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Tayi Sadhana Nature Cure
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Education & Training Dropdown */}
+            <div className="relative group">
+              <button
+                className="text-ink hover:text-earth transition-colors font-medium flex items-center"
+                onMouseEnter={() => setEducationDropdownOpen(true)}
+                onMouseLeave={() => setEducationDropdownOpen(false)}
+              >
+                Education
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {educationDropdownOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-lg py-2"
+                  onMouseEnter={() => setEducationDropdownOpen(true)}
+                  onMouseLeave={() => setEducationDropdownOpen(false)}
+                >
+                  <Link to="/education/overview" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Courses Overview
+                  </Link>
+                  <Link to="/education/yoga-ttc" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Tayi Sadhana Yoga TTC
+                  </Link>
+                  <Link to="/education/nature-cure-ttc" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Tayi Sadhana Nature Cure TTC
+                  </Link>
+                  <Link to="/education/master-ttc" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Sadhana Master TTC
+                  </Link>
+                  <Link to="/education/philosophy-ttc" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Yoga Philosophy TTC
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <Link to="/disciples" className="text-ink hover:text-earth transition-colors font-medium">
+              Disciples
+            </Link>
+
+            {/* Certification Dropdown */}
+            <div className="relative group">
+              <button
+                className="text-ink hover:text-earth transition-colors font-medium flex items-center"
+                onMouseEnter={() => setCertificationDropdownOpen(true)}
+                onMouseLeave={() => setCertificationDropdownOpen(false)}
+              >
+                Certification
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {certificationDropdownOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2"
+                  onMouseEnter={() => setCertificationDropdownOpen(true)}
+                  onMouseLeave={() => setCertificationDropdownOpen(false)}
+                >
+                  <Link to="/certification/teacher-certification" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Teacher Certification
+                  </Link>
+                  <Link to="/certification/code-of-discipline" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Code of Discipline
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Media & Resources Dropdown */}
+            <div className="relative group">
+              <button
+                className="text-ink hover:text-earth transition-colors font-medium flex items-center"
+                onMouseEnter={() => setMediaDropdownOpen(true)}
+                onMouseLeave={() => setMediaDropdownOpen(false)}
+              >
+                Media
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mediaDropdownOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2"
+                  onMouseEnter={() => setMediaDropdownOpen(true)}
+                  onMouseLeave={() => setMediaDropdownOpen(false)}
+                >
+                  <Link to="/media/gallery" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Gallery
+                  </Link>
+                  <Link to="/media/videos" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Videos
+                  </Link>
+                  <Link to="/media/news-events" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    News &amp; Events
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <Link to="/contact" className="text-ink hover:text-earth transition-colors font-medium">
+              Contact
+            </Link>
+          </nav>
+
+          {/* CTA Button */}
+          <Link
+            to="/divine-project/donation"
+            className="hidden lg:block bg-earth text-white px-6 py-2 rounded-full hover:bg-clay transition-colors"
+          >
+            Donate Now
+          </Link>
+
+          {/* Mobile menu button */}
+          <button
+            className="lg:hidden text-ink"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {mobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden py-4 border-t border-earth/20">
+            <nav className="flex flex-col space-y-2">
+              <Link to="/" className="px-4 py-2 hover:bg-mist rounded" onClick={() => setMobileMenuOpen(false)}>
+                Home
+              </Link>
+
+              <details className="px-4">
+                <summary className="cursor-pointer py-2 font-medium">About Us</summary>
+                <div className="pl-4 mt-2 space-y-2">
+                  <Link to="/about/tayi-sadhana-yoga" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    About Tayi Sadhana Yoga
+                  </Link>
+                  <Link to="/about/sadhana-yogi" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Sadhana Yogi
+                  </Link>
+                  <Link to="/about/guruji-message" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Guruji's Message
+                  </Link>
+                  <Link to="/about/vision-mission" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Vision &amp; Mission
+                  </Link>
+                </div>
+              </details>
+
+              <details className="px-4">
+                <summary className="cursor-pointer py-2 font-medium">Divine Project</summary>
+                <div className="pl-4 mt-2 space-y-2">
+                  <Link to="/divine-project/birth-of-mother" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Birth of the Mother
+                  </Link>
+                  <Link to="/divine-project/education-support" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Education Support
+                  </Link>
+                  <Link to="/divine-project/donation" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Donation
+                  </Link>
+                </div>
+              </details>
+
+              <details className="px-4">
+                <summary className="cursor-pointer py-2 font-medium">The System</summary>
+                <div className="pl-4 mt-2 space-y-2">
+                  <Link to="/system/tayi-culture" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Tayi Culture
+                  </Link>
+                  <Link to="/system/tayi-sadhana-yoga" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Tayi Sadhana Yoga
+                  </Link>
+                  <Link to="/system/nature-cure" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Tayi Sadhana Nature Cure
+                  </Link>
+                </div>
+              </details>
+
+              <details className="px-4">
+                <summary className="cursor-pointer py-2 font-medium">Education</summary>
+                <div className="pl-4 mt-2 space-y-2">
+                  <Link to="/education/overview" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Courses Overview
+                  </Link>
+                  <Link to="/education/yoga-ttc" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Tayi Sadhana Yoga TTC
+                  </Link>
+                  <Link to="/education/nature-cure-ttc" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Tayi Sadhana Nature Cure TTC
+                  </Link>
+                  <Link to="/education/master-ttc" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Sadhana Master TTC
+                  </Link>
+                  <Link to="/education/philosophy-ttc" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Yoga Philosophy TTC
+                  </Link>
+                </div>
+              </details>
+
+              <Link to="/disciples" className="px-4 py-2 hover:bg-mist rounded" onClick={() => setMobileMenuOpen(false)}>
+                Disciples
+              </Link>
+
+              <details className="px-4">
+                <summary className="cursor-pointer py-2 font-medium">Certification</summary>
+                <div className="pl-4 mt-2 space-y-2">
+                  <Link to="/certification/teacher-certification" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Teacher Certification
+                  </Link>
+                  <Link to="/certification/code-of-discipline" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Code of Discipline
+                  </Link>
+                </div>
+              </details>
+
+              <details className="px-4">
+                <summary className="cursor-pointer py-2 font-medium">Media</summary>
+                <div className="pl-4 mt-2 space-y-2">
+                  <Link to="/media/gallery" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Gallery
+                  </Link>
+                  <Link to="/media/videos" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Videos
+                  </Link>
+                  <Link to="/media/news-events" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    News &amp; Events
+                  </Link>
+                </div>
+              </details>
+
+              <Link to="/contact" className="px-4 py-2 hover:bg-mist rounded" onClick={() => setMobileMenuOpen(false)}>
+                Contact
+              </Link>
+
+              <Link
+                to="/divine-project/donation"
+                className="mx-4 mt-4 bg-earth text-white px-6 py-2 rounded-full text-center hover:bg-clay transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Donate Now
+              </Link>
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+}
