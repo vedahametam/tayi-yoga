@@ -106,9 +106,6 @@ export default function Header() {
               )}
             </div>
 
-            <Link to="/contact" className="text-ink hover:text-earth transition-colors font-medium">
-              Contact
-            </Link>
           </nav>
         </div>
       </div>
@@ -219,6 +216,10 @@ export default function Header() {
                 </div>
               )}
             </div>
+
+            <Link to="/contact" className="text-ink hover:text-earth transition-colors font-medium">
+              Contact
+            </Link>
           </nav>
 
           {/* CTA Button */}
