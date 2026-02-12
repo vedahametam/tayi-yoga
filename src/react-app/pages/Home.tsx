@@ -103,7 +103,7 @@ export default function Home() {
               </Link>
             </div>
             <div>
-              <ImagePlaceholder width={600} height={800} text="Welcome Image - Yoga Practice" className="rounded-lg shadow-2xl" />
+              <ImagePlaceholder width={600} height={800} text="Welcome Image - Yoga Practice" src="/images/general/welcome.png" alt="Welcome to Tayi Sadhana Yoga" className="rounded-lg shadow-2xl" />
             </div>
           </div>
         </div>
