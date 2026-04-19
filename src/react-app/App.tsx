@@ -24,8 +24,6 @@ import NatureCure from './pages/system/NatureCure';
 import CoursesOverview from './pages/education/CoursesOverview';
 import YogaTTC from './pages/education/YogaTTC';
 import NatureCureTTC from './pages/education/NatureCureTTC';
-import MasterTTC from './pages/education/MasterTTC';
-import PhilosophyTTC from './pages/education/PhilosophyTTC';
 
 // Other Pages
 import Disciples from './pages/Disciples';
@@ -74,8 +72,6 @@ function App() {
             <Route path="overview" element={<CoursesOverview />} />
             <Route path="yoga-ttc" element={<YogaTTC />} />
             <Route path="nature-cure-ttc" element={<NatureCureTTC />} />
-            <Route path="master-ttc" element={<MasterTTC />} />
-            <Route path="philosophy-ttc" element={<PhilosophyTTC />} />
           </Route>
 
           {/* Other Routes */}

@@ -134,12 +134,6 @@ export default function Header() {
                   <Link to="/education/nature-cure-ttc" className="block px-4 py-2 hover:bg-sand transition-colors">
                     Tayi Sadhana Nature Cure TTC
                   </Link>
-                  <Link to="/education/master-ttc" className="block px-4 py-2 hover:bg-sand transition-colors">
-                    Sadhana Master TTC
-                  </Link>
-                  <Link to="/education/philosophy-ttc" className="block px-4 py-2 hover:bg-sand transition-colors">
-                    Yoga Philosophy TTC
-                  </Link>
                 </div>
               )}
             </div>
@@ -292,12 +286,6 @@ export default function Header() {
                   </Link>
                   <Link to="/education/nature-cure-ttc" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
                     Tayi Sadhana Nature Cure TTC
-                  </Link>
-                  <Link to="/education/master-ttc" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
-                    Sadhana Master TTC
-                  </Link>
-                  <Link to="/education/philosophy-ttc" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
-                    Yoga Philosophy TTC
                   </Link>
                 </div>
               </details>
