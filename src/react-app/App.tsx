@@ -24,6 +24,7 @@ import NatureCure from './pages/system/NatureCure';
 import CoursesOverview from './pages/education/CoursesOverview';
 import YogaTTC from './pages/education/YogaTTC';
 import NatureCureTTC from './pages/education/NatureCureTTC';
+import TayiYoga12Years from './pages/education/TayiYoga12Years';
 
 // Other Pages
 import Disciples from './pages/Disciples';
@@ -70,6 +71,7 @@ function App() {
           {/* Education Routes */}
           <Route path="education">
             <Route path="overview" element={<CoursesOverview />} />
+            <Route path="12-years" element={<TayiYoga12Years />} />
             <Route path="yoga-ttc" element={<YogaTTC />} />
             <Route path="nature-cure-ttc" element={<NatureCureTTC />} />
           </Route>

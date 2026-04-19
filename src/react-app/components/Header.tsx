@@ -128,6 +128,9 @@ export default function Header() {
                   <Link to="/education/overview" className="block px-4 py-2 hover:bg-sand transition-colors">
                     Courses Overview
                   </Link>
+                  <Link to="/education/12-years" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Tayi Sadhana Yoga - 12 Years
+                  </Link>
                   <Link to="/education/yoga-ttc" className="block px-4 py-2 hover:bg-sand transition-colors">
                     Tayi Sadhana Yoga TTC
                   </Link>
@@ -280,6 +283,9 @@ export default function Header() {
                 <div className="pl-4 mt-2 space-y-2">
                   <Link to="/education/overview" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
                     Courses Overview
+                  </Link>
+                  <Link to="/education/12-years" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                    Tayi Sadhana Yoga - 12 Years
                   </Link>
                   <Link to="/education/yoga-ttc" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
                     Tayi Sadhana Yoga TTC
