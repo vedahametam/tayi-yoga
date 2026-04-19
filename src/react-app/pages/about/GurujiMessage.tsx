@@ -16,7 +16,7 @@ export default function GurujiMessage() {
           <div className="text-center mb-16">
             <ImagePlaceholder width={300} height={300} text="Guruji Portrait" className="rounded-full mx-auto mb-6 shadow-2xl" />
             <h2 className="text-3xl font-serif font-bold text-ink mb-2">
-              Guruji's Name
+              Yogacharya Hemanth
             </h2>
             <p className="text-lg text-earth">
               Founder & Spiritual Guide, Tayi Sadhana Yoga
