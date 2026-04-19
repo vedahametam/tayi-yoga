@@ -3,10 +3,8 @@ import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
 
 // About Us Pages (lazy loaded for performance)
-import AboutTayiSadhanaYoga from './pages/about/AboutTayiSadhanaYoga';
 import SadhanaYogi from './pages/about/SadhanaYogi';
 import GurujiMessage from './pages/about/GurujiMessage';
-import VisionMission from './pages/about/VisionMission';
 import SadhanaYogaCulture from './pages/about/SadhanaYogaCulture';
 
 // Divine Project Pages
@@ -38,10 +36,8 @@ function App() {
 
           {/* About Us Routes */}
           <Route path="about">
-            <Route path="tayi-sadhana-yoga" element={<AboutTayiSadhanaYoga />} />
             <Route path="sadhana-yogi" element={<SadhanaYogi />} />
             <Route path="guruji-message" element={<GurujiMessage />} />
-            <Route path="vision-mission" element={<VisionMission />} />
           </Route>
 
           {/* Divine Project Routes */}

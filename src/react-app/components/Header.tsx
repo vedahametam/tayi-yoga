@@ -14,37 +14,7 @@ export default function Header() {
       <div className="hidden lg:block bg-earth/10 border-b border-earth/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex justify-end items-center space-x-6 py-2 text-sm">
-            {/* About Us Dropdown */}
-            <div
-              className="relative group"
-              onMouseEnter={() => setAboutDropdownOpen(true)}
-              onMouseLeave={() => setAboutDropdownOpen(false)}
-            >
-              <button
-                className="text-ink hover:text-earth transition-colors font-medium flex items-center py-1"
-              >
-                About Us
-                <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {aboutDropdownOpen && (
-                <div className="absolute top-full right-0 mt-0 w-56 bg-white shadow-lg rounded-lg py-2">
-                  <Link to="/about/tayi-sadhana-yoga" className="block px-4 py-2 text-sm hover:bg-sand transition-colors">
-                    About Tayi Sadhana Yoga
-                  </Link>
-                  <Link to="/about/sadhana-yogi" className="block px-4 py-2 text-sm hover:bg-sand transition-colors">
-                    Sadhana Yogi
-                  </Link>
-                  <Link to="/about/guruji-message" className="block px-4 py-2 text-sm hover:bg-sand transition-colors">
-                    Guruji's Message
-                  </Link>
-                  <Link to="/about/vision-mission" className="block px-4 py-2 text-sm hover:bg-sand transition-colors">
-                    Vision &amp; Mission
-                  </Link>
-                </div>
-              )}
-            </div>
+
 
             {/* Divine Project Link */}
             <Link
@@ -78,6 +48,32 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
+
+            {/* About Us Dropdown */}
+            <div
+              className="relative group"
+              onMouseEnter={() => setAboutDropdownOpen(true)}
+              onMouseLeave={() => setAboutDropdownOpen(false)}
+            >
+              <button
+                className="text-ink hover:text-earth transition-colors font-medium flex items-center py-2"
+              >
+                About Us
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {aboutDropdownOpen && (
+                <div className="absolute top-full left-0 mt-0 w-56 bg-white shadow-lg rounded-lg py-2">
+                  <Link to="/about/sadhana-yogi" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Sadhana Yogi
+                  </Link>
+                  <Link to="/about/guruji-message" className="block px-4 py-2 hover:bg-sand transition-colors">
+                    Guruji's Message
+                  </Link>
+                </div>
+              )}
+            </div>
 
             {/* Education & Training Dropdown */}
             <div
@@ -210,17 +206,11 @@ export default function Header() {
               <details className="px-4">
                 <summary className="cursor-pointer py-2 font-medium">About Us</summary>
                 <div className="pl-4 mt-2 space-y-2">
-                  <Link to="/about/tayi-sadhana-yoga" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
-                    About Tayi Sadhana Yoga
-                  </Link>
                   <Link to="/about/sadhana-yogi" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
                     Sadhana Yogi
                   </Link>
                   <Link to="/about/guruji-message" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
                     Guruji's Message
-                  </Link>
-                  <Link to="/about/vision-mission" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
-                    Vision &amp; Mission
                   </Link>
                 </div>
               </details>
