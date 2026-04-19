@@ -5,7 +5,6 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [educationDropdownOpen, setEducationDropdownOpen] = useState(false);
-  const [systemDropdownOpen, setSystemDropdownOpen] = useState(false);
   const [certificationDropdownOpen, setCertificationDropdownOpen] = useState(false);
   const [mediaDropdownOpen, setMediaDropdownOpen] = useState(false);
 
@@ -62,35 +61,6 @@ export default function Header() {
             >
               Sadhana Yoga Culture
             </Link>
-
-            {/* The System Dropdown */}
-            <div
-              className="relative group"
-              onMouseEnter={() => setSystemDropdownOpen(true)}
-              onMouseLeave={() => setSystemDropdownOpen(false)}
-            >
-              <button
-                className="text-ink hover:text-earth transition-colors font-medium flex items-center py-1"
-              >
-                The System
-                <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {systemDropdownOpen && (
-                <div className="absolute top-full right-0 mt-0 w-56 bg-white shadow-lg rounded-lg py-2">
-                  <Link to="/system/tayi-culture" className="block px-4 py-2 text-sm hover:bg-sand transition-colors">
-                    Tayi Culture
-                  </Link>
-                  <Link to="/system/tayi-sadhana-yoga" className="block px-4 py-2 text-sm hover:bg-sand transition-colors">
-                    Tayi Sadhana Yoga
-                  </Link>
-                  <Link to="/system/nature-cure" className="block px-4 py-2 text-sm hover:bg-sand transition-colors">
-                    Tayi Sadhana Nature Cure
-                  </Link>
-                </div>
-              )}
-            </div>
 
           </nav>
         </div>
@@ -262,21 +232,6 @@ export default function Header() {
               <Link to="/sadhana-yoga-culture" className="px-4 py-2 hover:bg-mist rounded font-medium" onClick={() => setMobileMenuOpen(false)}>
                 Sadhana Yoga Culture
               </Link>
-
-              <details className="px-4">
-                <summary className="cursor-pointer py-2 font-medium">The System</summary>
-                <div className="pl-4 mt-2 space-y-2">
-                  <Link to="/system/tayi-culture" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
-                    Tayi Culture
-                  </Link>
-                  <Link to="/system/tayi-sadhana-yoga" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
-                    Tayi Sadhana Yoga
-                  </Link>
-                  <Link to="/system/nature-cure" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
-                    Tayi Sadhana Nature Cure
-                  </Link>
-                </div>
-              </details>
 
               <details className="px-4">
                 <summary className="cursor-pointer py-2 font-medium">Education</summary>

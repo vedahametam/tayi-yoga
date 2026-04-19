@@ -14,12 +14,6 @@ import DivineProject from './pages/divine-project/DivineProject';
 import BirthOfMother from './pages/divine-project/BirthOfMother';
 import EducationSupport from './pages/divine-project/EducationSupport';
 import Donation from './pages/divine-project/Donation';
-
-// System Pages
-import TayiCulture from './pages/system/TayiCulture';
-import TayiSadhanaYogaSystem from './pages/system/TayiSadhanaYogaSystem';
-import NatureCure from './pages/system/NatureCure';
-
 // Education Pages
 import CoursesOverview from './pages/education/CoursesOverview';
 import YogaTTC from './pages/education/YogaTTC';
@@ -60,14 +54,6 @@ function App() {
 
           {/* Sadhana Yoga Culture */}
           <Route path="sadhana-yoga-culture" element={<SadhanaYogaCulture />} />
-
-          {/* System Routes */}
-          <Route path="system">
-            <Route path="tayi-culture" element={<TayiCulture />} />
-            <Route path="tayi-sadhana-yoga" element={<TayiSadhanaYogaSystem />} />
-            <Route path="nature-cure" element={<NatureCure />} />
-          </Route>
-
           {/* Education Routes */}
           <Route path="education">
             <Route path="overview" element={<CoursesOverview />} />
