@@ -154,7 +154,7 @@ export default function YogaTTC() {
         </div>
       </section>
 
-      <section className="py-32 bg-ink text-white text-center relative overflow-hidden">
+      <section className="py-32 bg-gradient-to-r from-earth to-clay text-white text-center relative overflow-hidden">
         {/* Subtle background decoration */}
         <div className="absolute inset-0 opacity-10 pointer-events-none flex justify-center items-center">
           <div className="w-[800px] h-[800px] rounded-full border border-white/20 blur-sm"></div>
@@ -167,7 +167,7 @@ export default function YogaTTC() {
           <p className="text-2xl text-mist/90 mb-10 font-medium">
             One system. Three levels. One complete path.
           </p>
-          <div className="w-24 h-1 bg-earth mx-auto mb-10 border-none"></div>
+          <div className="w-24 h-1 bg-sun mx-auto mb-10 border-none"></div>
           <p className="text-xl text-white/90 leading-relaxed italic font-serif">
             "Tayi Yoga is not just practice — <br />
             it is a structured journey of human mastery and evolution."
@@ -176,7 +176,7 @@ export default function YogaTTC() {
           <div className="mt-16">
             <Link
               to="/contact"
-              className="px-10 py-4 bg-earth text-white rounded-full font-bold text-lg hover:bg-clay transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block"
+              className="px-10 py-4 bg-sun text-ink rounded-full font-bold text-lg hover:bg-white transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block"
             >
               Begin Your Journey
             </Link>
