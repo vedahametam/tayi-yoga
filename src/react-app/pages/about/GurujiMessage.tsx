@@ -26,99 +26,42 @@ export default function GurujiMessage() {
           <div className="bg-gradient-to-br from-sand to-mist rounded-2xl p-12 mb-12 shadow-lg">
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-ink/90 mb-6 leading-relaxed italic">
-                "Beloved seekers of truth,
+                "Let us join hands together.
               </p>
               <p className="text-lg text-ink/80 mb-6 leading-relaxed">
-                In this age of constant movement and distraction, the ancient call of yoga becomes more vital than ever.
-                Tayi Sadhana Yoga is not a new invention—it is the rediscovery of eternal truths that have guided humanity
-                toward liberation for millennia.
+                Let us come together as the children of Nature, to rebuild our connection with the Universal Mother.
               </p>
               <p className="text-lg text-ink/80 mb-6 leading-relaxed">
-                The Divine Mother, in her infinite compassion, has graced us with this path. She is the supreme source,
-                the nurturing force that sustains all creation. When we surrender to her embrace, we find the peace that
-                the world cannot give. In her lap, all suffering dissolves, all questions find their answers, and the
-                soul remembers its eternal nature.
+                This sacred space will be created using ancient Vedic methods, expressed through pure scientific principles and precise geometric patterns — without modern industrial materials such as iron or concrete. Instead, it will be formed only from natural elements like earth (mud), stone, and lime, allowing the structure to live, breathe, and resonate with pranic energy.
               </p>
               <p className="text-lg text-ink/80 mb-6 leading-relaxed">
-                This practice we share is holistic—it addresses not only the physical body but the subtle energies,
-                the mind, the emotions, and ultimately, the spirit. Through disciplined practice, sincere devotion,
-                and the grace of the Mother, transformation is inevitable.
+                Every dimension will follow sacred geometry, aligned with the five elements and the seven chakras, so the space itself becomes a living field of healing.
               </p>
               <p className="text-lg text-ink/80 mb-6 leading-relaxed">
-                I invite you to approach this path with humility and dedication. Yoga is not about achieving perfection
-                in postures; it is about becoming intimate with your true self. It is about recognizing the divinity
-                within and allowing that light to shine forth in service to all beings.
+                This is not a religious structure.<br />
+                This is not a temple of belief.
               </p>
               <p className="text-lg text-ink/80 mb-6 leading-relaxed">
-                May the Divine Mother guide your steps. May your practice be sincere and your heart be open.
-                Remember that you are never alone on this journey—the entire lineage of masters supports you,
-                and the Mother herself walks beside you.
+                It is a space for the Mother — where all her children can enter without hesitation, beyond religion, nationality, or identity.
               </p>
-              <p className="text-xl text-ink/90 mt-8 italic">
-                With blessings and love,<br/>
-                <span className="font-serif font-bold">Guruji</span>"
+              <p className="text-lg text-ink/80 mb-6 leading-relaxed">
+                Yoga today is universal.<br />
+                Nature is universal.<br />
+                The Mother belongs to all.
               </p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-serif font-bold text-earth mb-6">
-                Guruji's Vision
-              </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-earth mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <p className="text-ink/80">
-                    Creating sacred spaces where seekers can experience the Divine Mother's presence
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-earth mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <p className="text-ink/80">
-                    Preserving and sharing authentic yogic wisdom for future generations
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-earth mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <p className="text-ink/80">
-                    Building a global community united in spiritual practice and service
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-earth mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <p className="text-ink/80">
-                    Integrating yoga with nature cure for complete holistic wellness
-                  </p>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-serif font-bold text-earth mb-6">
-                Life & Teachings
-              </h3>
-              <p className="text-ink/80 mb-4 leading-relaxed">
-                Guruji's spiritual journey began in early childhood with profound mystical experiences.
-                After years of intensive sadhana under realized masters, Guruji was guided by the Divine Mother
-                to establish Tayi Sadhana Yoga as a comprehensive path to liberation.
+              <p className="text-lg text-ink/80 mb-6 leading-relaxed">
+                Through this vision, we aim to upgrade yoga responsibly for future generations, creating a place where science, nature, geometry, and life come together in harmony.
               </p>
-              <p className="text-ink/80 mb-4 leading-relaxed">
-                Drawing from multiple yogic traditions—Hatha, Raja, Bhakti, and Jnana—Guruji has synthesized
-                a unique approach that addresses the needs of modern seekers while maintaining the purity of
-                ancient teachings.
+              <p className="text-lg text-ink/80 mb-6 leading-relaxed">
+                Let us join hands together —<br />
+                to allow trees, birds, animals, and human beings to coexist again,<br />
+                to restore balance,<br />
+                and to offer healing not to one community,<br />
+                but to the entire universe.
               </p>
-              <p className="text-ink/80 leading-relaxed">
-                Known for profound compassion, clarity of teaching, and unwavering dedication to the path,
-                Guruji continues to guide thousands of students worldwide on their spiritual journey.
+              <p className="text-xl text-ink/90 mt-8 italic text-right">
+                She is the Universal Mother.<br />
+                <span className="font-serif font-bold">And this space is for all her children"</span>
               </p>
             </div>
           </div>

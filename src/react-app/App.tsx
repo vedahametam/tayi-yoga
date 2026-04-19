@@ -9,6 +9,7 @@ import GurujiMessage from './pages/about/GurujiMessage';
 import VisionMission from './pages/about/VisionMission';
 
 // Divine Project Pages
+import DivineProject from './pages/divine-project/DivineProject';
 import BirthOfMother from './pages/divine-project/BirthOfMother';
 import EducationSupport from './pages/divine-project/EducationSupport';
 import Donation from './pages/divine-project/Donation';
@@ -51,6 +52,7 @@ function App() {
 
           {/* Divine Project Routes */}
           <Route path="divine-project">
+            <Route index element={<DivineProject />} />
             <Route path="birth-of-mother" element={<BirthOfMother />} />
             <Route path="education-support" element={<EducationSupport />} />
             <Route path="donation" element={<Donation />} />

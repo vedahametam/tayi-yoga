@@ -48,34 +48,13 @@ export default function Header() {
               )}
             </div>
 
-            {/* Divine Project Dropdown */}
-            <div
-              className="relative group"
-              onMouseEnter={() => setDivineDropdownOpen(true)}
-              onMouseLeave={() => setDivineDropdownOpen(false)}
+            {/* Divine Project Link */}
+            <Link
+              to="/divine-project"
+              className="text-ink hover:text-earth transition-colors font-medium flex items-center py-1"
             >
-              <button
-                className="text-ink hover:text-earth transition-colors font-medium flex items-center py-1"
-              >
-                Divine Project
-                <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {divineDropdownOpen && (
-                <div className="absolute top-full right-0 mt-0 w-56 bg-white shadow-lg rounded-lg py-2">
-                  <Link to="/divine-project/birth-of-mother" className="block px-4 py-2 text-sm hover:bg-sand transition-colors">
-                    Birth of the Mother
-                  </Link>
-                  <Link to="/divine-project/education-support" className="block px-4 py-2 text-sm hover:bg-sand transition-colors">
-                    Education Support
-                  </Link>
-                  <Link to="/divine-project/donation" className="block px-4 py-2 text-sm hover:bg-sand transition-colors">
-                    Donation
-                  </Link>
-                </div>
-              )}
-            </div>
+              Divine Project
+            </Link>
 
             {/* The System Dropdown */}
             <div
@@ -272,20 +251,9 @@ export default function Header() {
                 </div>
               </details>
 
-              <details className="px-4">
-                <summary className="cursor-pointer py-2 font-medium">Divine Project</summary>
-                <div className="pl-4 mt-2 space-y-2">
-                  <Link to="/divine-project/birth-of-mother" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
-                    Birth of the Mother
-                  </Link>
-                  <Link to="/divine-project/education-support" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
-                    Education Support
-                  </Link>
-                  <Link to="/divine-project/donation" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
-                    Donation
-                  </Link>
-                </div>
-              </details>
+              <Link to="/divine-project" className="px-4 py-2 hover:bg-mist rounded font-medium" onClick={() => setMobileMenuOpen(false)}>
+                Divine Project
+              </Link>
 
               <details className="px-4">
                 <summary className="cursor-pointer py-2 font-medium">The System</summary>
