@@ -6,7 +6,6 @@ export default function Header() {
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [educationDropdownOpen, setEducationDropdownOpen] = useState(false);
   const [systemDropdownOpen, setSystemDropdownOpen] = useState(false);
-  const [divineDropdownOpen, setDivineDropdownOpen] = useState(false);
   const [certificationDropdownOpen, setCertificationDropdownOpen] = useState(false);
   const [mediaDropdownOpen, setMediaDropdownOpen] = useState(false);
 
