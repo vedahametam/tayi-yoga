@@ -55,6 +55,14 @@ export default function Header() {
               Divine Project
             </Link>
 
+            {/* Sadhana Yoga Culture Link */}
+            <Link
+              to="/sadhana-yoga-culture"
+              className="text-ink hover:text-earth transition-colors font-medium flex items-center py-1"
+            >
+              Sadhana Yoga Culture
+            </Link>
+
             {/* The System Dropdown */}
             <div
               className="relative group"
@@ -252,6 +260,10 @@ export default function Header() {
 
               <Link to="/divine-project" className="px-4 py-2 hover:bg-mist rounded font-medium" onClick={() => setMobileMenuOpen(false)}>
                 Divine Project
+              </Link>
+
+              <Link to="/sadhana-yoga-culture" className="px-4 py-2 hover:bg-mist rounded font-medium" onClick={() => setMobileMenuOpen(false)}>
+                Sadhana Yoga Culture
               </Link>
 
               <details className="px-4">

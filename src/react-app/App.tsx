@@ -7,6 +7,7 @@ import AboutTayiSadhanaYoga from './pages/about/AboutTayiSadhanaYoga';
 import SadhanaYogi from './pages/about/SadhanaYogi';
 import GurujiMessage from './pages/about/GurujiMessage';
 import VisionMission from './pages/about/VisionMission';
+import SadhanaYogaCulture from './pages/about/SadhanaYogaCulture';
 
 // Divine Project Pages
 import DivineProject from './pages/divine-project/DivineProject';
@@ -57,6 +58,9 @@ function App() {
             <Route path="education-support" element={<EducationSupport />} />
             <Route path="donation" element={<Donation />} />
           </Route>
+
+          {/* Sadhana Yoga Culture */}
+          <Route path="sadhana-yoga-culture" element={<SadhanaYogaCulture />} />
 
           {/* System Routes */}
           <Route path="system">
