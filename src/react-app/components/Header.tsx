@@ -91,9 +91,9 @@ export default function Header() {
               </button>
               {educationDropdownOpen && (
                 <div className="absolute top-full left-0 mt-0 w-64 bg-white shadow-lg rounded-lg py-2">
-                  <Link to="/education/overview" className="block px-4 py-2 hover:bg-sand transition-colors">
+                  {/* <Link to="/education/overview" className="block px-4 py-2 hover:bg-sand transition-colors">
                     Courses Overview
-                  </Link>
+                  </Link> */}
                   <Link to="/education/12-years" className="block px-4 py-2 hover:bg-sand transition-colors">
                     Tayi Sadhana Yoga - 12 Years
                   </Link>
@@ -226,9 +226,9 @@ export default function Header() {
               <details className="px-4">
                 <summary className="cursor-pointer py-2 font-medium">Education</summary>
                 <div className="pl-4 mt-2 space-y-2">
-                  <Link to="/education/overview" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
+                  {/* <Link to="/education/overview" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
                     Courses Overview
-                  </Link>
+                  </Link> */}
                   <Link to="/education/12-years" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
                     Tayi Sadhana Yoga - 12 Years
                   </Link>
