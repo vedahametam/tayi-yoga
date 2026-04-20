@@ -14,11 +14,16 @@ export default function Home() {
           }}></div>
         </div>
 
-        {/* Placeholder for Hero Image */}
-        <div className="absolute inset-0 bg-gradient-to-br from-earth/10 via-transparent to-leaf/10">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-earth/20 text-sm font-medium">Hero Background Image (1920x1080px)</span>
-          </div>
+        {/* Hero Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="/images/general/hv_2.jpeg"
+            alt="Tayi Sadhana Yoga Hero"
+            className="w-full h-full object-cover"
+          />
+          {/* Overlay to ensure text readability */}
+          <div className="absolute inset-0 bg-mist/60 mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-mist via-transparent to-transparent opacity-80"></div>
         </div>
 
         {/* Content */}
