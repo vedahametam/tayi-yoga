@@ -155,7 +155,7 @@ export default function Home() {
             {/* Pillar 2 */}
             <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
               <div className="mb-6">
-                <ImagePlaceholder width={400} height={300} text="Tayi Sadhana Yoga" className="rounded-lg" />
+                <ImagePlaceholder width={400} height={300} text="Tayi Sadhana Yoga" src="/images/general/tayi_students.jpeg" className="rounded-lg object-cover" />
               </div>
               <h3 className="text-2xl font-serif font-bold text-earth mb-4">Tayi Sadhana Yoga</h3>
               <p className="text-ink/70 mb-6 leading-relaxed">
@@ -176,7 +176,7 @@ export default function Home() {
             {/* Pillar 3 */}
             <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
               <div className="mb-6">
-                <ImagePlaceholder width={400} height={300} text="Nature Cure" className="rounded-lg" />
+                <ImagePlaceholder width={400} height={300} text="Nature Cure" src="/images/general/nature_cure.jpeg" className="rounded-lg object-cover" />
               </div>
               <h3 className="text-2xl font-serif font-bold text-earth mb-4">Nature Cure</h3>
               <p className="text-ink/70 mb-6 leading-relaxed">
