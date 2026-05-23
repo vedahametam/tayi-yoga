@@ -7,8 +7,9 @@ export default function TayiYoga12Years() {
       <PageHero
         title="12 Years Tayi Sadhana Yoga – Mastery Life"
         subtitle="A Classical Path Rooted in Sanātana Dharma"
-        imagePlaceholder="12 Years Tayi Yoga Hero"
-        height="medium"
+        imageSrc="/images/general/12_years.jpeg"
+        imagePosition="object-top"
+        height="large"
       />
 
       <section className="py-20 bg-white">
