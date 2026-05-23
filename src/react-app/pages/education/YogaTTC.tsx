@@ -7,8 +7,9 @@ export default function YogaTTC() {
       <PageHero
         title="Tayi Yoga Mastery Life System"
         subtitle="12 Days • 12 Months • 12 Years | One Path. Three Levels. Complete Human Transformation."
-        imagePlaceholder="Tayi Yoga Mastery Hero"
-        height="medium"
+        imageSrc="/images/general/ttc.jpeg"
+        imagePosition="object-top"
+        height="large"
       />
 
       <section className="py-20 bg-white">
