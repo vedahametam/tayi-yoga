@@ -3,14 +3,22 @@ interface PageHeroProps {
   subtitle?: string;
   imagePlaceholder?: string;
   imageSrc?: string;
+  imagePosition?: string;
   height?: 'small' | 'medium' | 'large';
 }
 
-export default function PageHero({ title, subtitle, imagePlaceholder = 'Hero Image', imageSrc, height = 'medium' }: PageHeroProps) {
+export default function PageHero({
+  title,
+  subtitle,
+  imagePlaceholder = 'Hero Image',
+  imageSrc,
+  imagePosition = 'object-center',
+  height = 'medium'
+}: PageHeroProps) {
   const heightClasses = {
     small: 'h-48 md:h-64',
     medium: 'h-64 md:h-80',
-    large: 'h-80 md:h-96'
+    large: 'h-[450px] md:h-[550px]'
   };
 
   return (
@@ -18,7 +26,7 @@ export default function PageHero({ title, subtitle, imagePlaceholder = 'Hero Ima
       {/* Background image or placeholder */}
       {imageSrc ? (
         <div className="absolute inset-0">
-          <img src={imageSrc} alt={imagePlaceholder} className="w-full h-full object-cover" />
+          <img src={imageSrc} alt={imagePlaceholder} className={`w-full h-full object-cover ${imagePosition}`} />
           <div className="absolute inset-0 bg-ink/40"></div>
         </div>
       ) : (

@@ -7,7 +7,8 @@ export default function GurujiMessage() {
         title="Guruji's Message"
         subtitle="Words of wisdom from our spiritual guide"
         imageSrc="/images/general/hv_7.jpeg"
-        height="medium"
+        imagePosition="object-[center_20%]"
+        height="large"
       />
 
       <section className="py-20 bg-white">
