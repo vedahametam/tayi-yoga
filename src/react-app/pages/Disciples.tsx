@@ -23,8 +23,9 @@ export default function Disciples() {
       <PageHero
         title="Our Teachers & Disciples"
         subtitle="Meet the dedicated practitioners who guide and inspire our community"
-        imagePlaceholder="Teachers Hero"
-        height="medium"
+        imageSrc="/images/general/disciples.jpg"
+        imagePosition="object-top"
+        height="large"
       />
 
       <section className="py-20 bg-white">
@@ -42,7 +43,7 @@ export default function Disciples() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <div>
-              <ImagePlaceholder width={600} height={700} text="Guruji Teaching" className="rounded-lg shadow-2xl" />
+              <ImagePlaceholder width={600} height={700} src="/images/general/hya.jpg" alt="Guruji Teaching" className="rounded-lg shadow-2xl object-cover" />
             </div>
             <div>
               <h2 className="text-4xl font-serif font-bold text-ink mb-6">
