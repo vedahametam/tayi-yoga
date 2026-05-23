@@ -6,7 +6,6 @@ export default function Header() {
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [educationDropdownOpen, setEducationDropdownOpen] = useState(false);
   const [certificationDropdownOpen, setCertificationDropdownOpen] = useState(false);
-  const [mediaDropdownOpen, setMediaDropdownOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-sand/95 backdrop-blur-sm shadow-md">
@@ -137,34 +136,9 @@ export default function Header() {
               )}
             </div>
 
-            {/* Media & Resources Dropdown */}
-            <div
-              className="relative group"
-              onMouseEnter={() => setMediaDropdownOpen(true)}
-              onMouseLeave={() => setMediaDropdownOpen(false)}
-            >
-              <button
-                className="text-ink hover:text-earth transition-colors font-medium flex items-center py-2"
-              >
-                Media
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {mediaDropdownOpen && (
-                <div className="absolute top-full left-0 mt-0 w-56 bg-white shadow-lg rounded-lg py-2">
-                  <Link to="/media/gallery" className="block px-4 py-2 hover:bg-sand transition-colors">
-                    Gallery
-                  </Link>
-                  <Link to="/media/videos" className="block px-4 py-2 hover:bg-sand transition-colors">
-                    Videos
-                  </Link>
-                  <Link to="/media/news-events" className="block px-4 py-2 hover:bg-sand transition-colors">
-                    News &amp; Events
-                  </Link>
-                </div>
-              )}
-            </div>
+            <Link to="/media/gallery" className="text-ink hover:text-earth transition-colors font-medium">
+              Gallery
+            </Link>
 
             <Link to="/contact" className="text-ink hover:text-earth transition-colors font-medium">
               Contact
@@ -257,20 +231,9 @@ export default function Header() {
                 </div>
               </details>
 
-              <details className="px-4">
-                <summary className="cursor-pointer py-2 font-medium">Media</summary>
-                <div className="pl-4 mt-2 space-y-2">
-                  <Link to="/media/gallery" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
-                    Gallery
-                  </Link>
-                  <Link to="/media/videos" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
-                    Videos
-                  </Link>
-                  <Link to="/media/news-events" className="block py-1" onClick={() => setMobileMenuOpen(false)}>
-                    News &amp; Events
-                  </Link>
-                </div>
-              </details>
+              <Link to="/media/gallery" className="px-4 py-2 hover:bg-mist rounded font-medium" onClick={() => setMobileMenuOpen(false)}>
+                Gallery
+              </Link>
 
               <Link to="/contact" className="px-4 py-2 hover:bg-mist rounded" onClick={() => setMobileMenuOpen(false)}>
                 Contact
