@@ -352,17 +352,17 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="bg-sand rounded-xl p-8 shadow-lg flex flex-col">
+                <div className="mb-6">
+                  <ImagePlaceholder width={80} height={80} src={testimonial.imageSrc} text={testimonial.imageText} className="rounded-full flex-shrink-0 object-cover shadow-md" />
+                </div>
                 <div className="text-ink/80 font-serif italic leading-relaxed text-base space-y-4 flex-grow mb-8 relative">
                   {testimonial.content.split('\n\n').map((paragraph, index) => (
                     <p key={index}>"{paragraph}"</p>
                   ))}
                 </div>
-                <div className="flex items-center mt-auto border-t border-earth/20 pt-6">
-                  <ImagePlaceholder width={60} height={60} src={testimonial.imageSrc} text={testimonial.imageText} className="rounded-full mr-4 flex-shrink-0 object-cover" />
-                  <div>
-                    <h4 className="font-semibold text-ink">{testimonial.name}</h4>
-                    <p className="text-sm text-ink/60">{testimonial.role}</p>
-                  </div>
+                <div className="mt-auto border-t border-earth/20 pt-6 text-right">
+                  <h4 className="font-semibold text-ink text-lg">{testimonial.name}</h4>
+                  <p className="text-sm text-ink/60">{testimonial.role}</p>
                 </div>
               </div>
             ))}
