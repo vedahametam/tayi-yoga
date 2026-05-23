@@ -7,8 +7,9 @@ export default function SadhanaYogi() {
       <PageHero
         title="Yogacharya Hemanth"
         subtitle="Founder of Tayi Sadhana Yoga"
-        imagePlaceholder="Yogacharya Hemanth Hero"
-        height="medium"
+        imageSrc="/images/general/yogacharya_hemanth.jpg"
+        imagePosition="object-[center_20%]"
+        height="large"
       />
 
       <section className="py-20 bg-white">
