@@ -14,7 +14,7 @@ export default function GurujiMessage() {
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <ImagePlaceholder width={300} height={300} text="Guruji Portrait" className="rounded-full mx-auto mb-6 shadow-2xl" />
+            <ImagePlaceholder width={300} height={300} src="/images/general/hv_7.jpeg" text="Guruji Portrait" className="rounded-full mx-auto mb-6 shadow-2xl object-cover" />
             <h2 className="text-3xl font-serif font-bold text-ink mb-2">
               Yogacharya Hemanth
             </h2>
