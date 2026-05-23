@@ -7,9 +7,20 @@ interface ImagePlaceholderProps {
   src?: string;
   alt?: string;
   className?: string;
+  objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
+  objectPosition?: string;
 }
 
-export default function ImagePlaceholder({ width, height, text, src, alt, className = '' }: ImagePlaceholderProps) {
+export default function ImagePlaceholder({
+  width,
+  height,
+  text,
+  src,
+  alt,
+  className = '',
+  objectFit = 'cover',
+  objectPosition = 'center'
+}: ImagePlaceholderProps) {
   const [imageError, setImageError] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -50,7 +61,8 @@ export default function ImagePlaceholder({ width, height, text, src, alt, classN
           <img
             src={src}
             alt={alt || text || 'Image'}
-            className={`w-full h-full object-cover ${imageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+            className={`w-full h-full ${imageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+            style={{ objectFit, objectPosition }}
             onLoad={() => setImageLoaded(true)}
             onError={() => setImageError(true)}
           />
