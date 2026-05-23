@@ -1,5 +1,4 @@
 import PageHero from '../../components/PageHero';
-import ImagePlaceholder from '../../components/ImagePlaceholder';
 
 export default function GurujiMessage() {
   return (
