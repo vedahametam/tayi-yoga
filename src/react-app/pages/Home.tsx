@@ -1,6 +1,33 @@
 import { Link } from 'react-router-dom';
 import ImagePlaceholder from '../components/ImagePlaceholder';
 
+const testimonials = [
+  {
+    id: 1,
+    name: "Saachi",
+    role: "Yoga Teacher",
+    imageSrc: "/images/general/saachi.png",
+    imageText: "Saachi",
+    content: "I have been practicing Sadhana Yoga continuously for 12 years under my beloved Guru V. Hemanth, and I also have 11 years of Sadhana Yoga teaching experience.\n\nA regular Sadhana Yoga practice always keeps me healthy, youthful and peaceful. It has helped me correct many bad daily habits, taught me to use my body in the right way, and live my life with full awareness.\n\nSadhana is the wisdom of life. While benefiting greatly from it myself, I am devoted to sharing this profound wisdom with others. It is my life mission to selflessly serve more people and help them gain health and happiness.\n\nI feel extremely blessed to meet my Guru V. Hemanth. It is his boundless selfless dedication that allows countless Chinese students to learn the authentic ancient Indian yoga system, which is truly a great blessing for all of us in China."
+  },
+  {
+    id: 2,
+    name: "Sima",
+    role: "Yoga Student",
+    imageSrc: "/images/general/sima.png",
+    imageText: "Sima",
+    content: "I've been practicing at this yoga institute in Beijing for five years now, and it has been a truly transformative journey. Hemanth is the founder of Sādhana Yoga, a system deeply rooted in the authentic tradition of Raja Yoga. What makes Sādhana Yoga so unique is that it works on all three layers of our being—the physical body, the energetic body, and the consciousness body—making it, in my view, the most complete and suitable practice for modern people.\n\nThe atmosphere here is unlike any other yoga studio I've encountered. There is no commercialism, no aggressive marketing—just a pure, quiet space designed entirely to serve what is most essential and fundamental to human well-being. It's simple, serene, and completely unpretentious.\n\nHemanth himself is a true spiritual practitioner living in the world but not of it. His presence and guidance have brought me the deepest healing I could have ever hoped for—not only physically, but mentally and emotionally as well. Over these five years, my body has been completely rebuilt, my patterns of thinking have shifted, and I've become a much calmer, more peaceful person. I wake up every day full of energy and clarity.\n\nI'm also deeply inspired by the many older students here. They show up with such dedication and vitality, and it's beautiful to see them thriving in their practice. I truly hope that as I age, I can be just like them—strong, steady, and joyful in body and mind.\n\nIf you're looking for an authentic yoga experience that goes far beyond the physical postures and truly touches the core of who you are, this is the place."
+  },
+  {
+    id: 3,
+    name: "Tatiana Orekhova",
+    role: "Russia",
+    imageSrc: "/images/general/tatiana.png",
+    imageText: "Tatiana",
+    content: "I’ve been going to Hemanth Yoga Studio in Beijing for more than two years, and it is a really special place for me.\n\nThe practice here is based on Raja Yoga, but the teacher has developed his own system, which makes the classes feel very thoughtful and structured. What I love most is the atmosphere: it’s calm, supportive, and there’s a real sense of community. People genuinely help and care about each other.\n\nOne thing that makes this studio different is that many asanas are done with closed eyes. It really helps you focus inward instead of thinking about how you look. At the same time, you still feel guided and safe, because the teacher gives clear instructions and gently corrects you when needed.\n\nI also like that the practice changes with the seasons. The teacher adapts the classes depending on the time of year, combining movement, breathing, and meditation. Plus, there’s a good variety of classes (from beginner to advanced and with different focuses like strength, flexibility or meditative).\n\nAfter some time, I noticed I became stronger and flexible not just physically but mentally too. Now I can much better managing my emotions and staying centered.\n\nI would definitely recommend this place if you’re looking for a deeper, more mindful yoga experience."
+  }
+];
+
 export default function Home() {
   return (
     <div className="bg-gradient-to-b from-mist via-sand to-mist">
@@ -323,19 +350,20 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-sand rounded-xl p-8 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <ImagePlaceholder width={80} height={80} text={`Student ${i}`} className="rounded-full mr-4" />
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className="bg-sand rounded-xl p-8 shadow-lg flex flex-col">
+                <div className="flex items-center mb-6">
+                  <ImagePlaceholder width={80} height={80} src={testimonial.imageSrc} text={testimonial.imageText} className="rounded-full mr-4 flex-shrink-0 object-cover" />
                   <div>
-                    <h4 className="font-semibold text-ink">Student Name {i}</h4>
-                    <p className="text-sm text-ink/60">Yoga Teacher</p>
+                    <h4 className="font-semibold text-ink">{testimonial.name}</h4>
+                    <p className="text-sm text-ink/60">{testimonial.role}</p>
                   </div>
                 </div>
-                <p className="text-ink/80 italic leading-relaxed">
-                  "Tayi Sadhana Yoga has transformed my life in ways I never imagined.
-                  The teachings are profound, the community is supportive, and the journey is beautiful."
-                </p>
+                <div className="text-ink/80 italic leading-relaxed text-sm space-y-4 flex-grow">
+                  {testimonial.content.split('\n\n').map((paragraph, index) => (
+                    <p key={index}>"{paragraph}"</p>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
