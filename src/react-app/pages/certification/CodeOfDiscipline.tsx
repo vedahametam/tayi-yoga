@@ -28,7 +28,7 @@ export default function CodeOfDiscipline() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <ImagePlaceholder width={600} height={700} src="/images/general/ethical_teaching.jpeg" alt="Ethical Teaching" className="rounded-lg shadow-2xl" objectFit="contain" objectPosition="center" />
+              <ImagePlaceholder width={600} height={700} src="/images/general/ethical_teaching.jpeg" alt="Ethical Teaching" className="rounded-lg shadow-2xl" objectFit="cover" objectPosition="center" />
             </div>
             <div>
               <h2 className="text-4xl font-serif font-bold text-ink mb-6">
