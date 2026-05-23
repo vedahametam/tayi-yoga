@@ -9,7 +9,7 @@ export default function CodeOfDiscipline() {
         subtitle="Ethical guidelines and professional standards for Tayi Sadhana Yoga teachers"
         imageSrc="/images/general/tayi_students.jpeg"
         imagePosition="object-top"
-        contentPosition="center"
+        contentPosition="top"
         height="large"
       />
 
