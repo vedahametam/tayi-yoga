@@ -6,8 +6,9 @@ export default function SadhanaYogaCulture() {
       <PageHero
         title="Sadhana Yoga Culture"
         subtitle="Yoga is the Way of Life"
-        imagePlaceholder="Sadhana Yoga Culture Hero"
-        height="medium"
+        imageSrc="/images/general/yoga_culture.jpg"
+        imagePosition="object-top"
+        height="large"
       />
 
       <section className="py-20 bg-white">
