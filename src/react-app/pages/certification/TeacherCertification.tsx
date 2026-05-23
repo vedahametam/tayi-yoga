@@ -26,7 +26,7 @@ export default function TeacherCertification() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <ImagePlaceholder width={600} height={700} text="Certification Ceremony" className="rounded-lg shadow-2xl" />
+              <ImagePlaceholder width={600} height={700} src="/images/general/disciples.jpg" alt="Certification Ceremony" className="rounded-lg shadow-2xl object-cover" />
             </div>
             <div>
               <h2 className="text-4xl font-serif font-bold text-ink mb-6">
@@ -179,7 +179,7 @@ export default function TeacherCertification() {
               </div>
             </div>
             <div>
-              <ImagePlaceholder width={600} height={600} text="Continuing Education" className="rounded-lg shadow-2xl" />
+              <ImagePlaceholder width={600} height={600} src="/images/general/yoga_culture.jpg" alt="Continuing Education" className="rounded-lg shadow-2xl object-cover" />
             </div>
           </div>
 
