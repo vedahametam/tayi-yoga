@@ -7,7 +7,7 @@ export default function DivineProject() {
       <PageHero
         title="Divine Project"
         subtitle="The Universal Mother and the Source of All Life"
-        imageSrc="/images/general/yoga_mandira.jpg"
+        imageSrc="/images/general/yoga_mandira.jpeg"
         imagePosition="object-center"
         height="large"
       />
