@@ -8,23 +8,23 @@ export default function Gallery() {
 
   // Shrine Construction album photos
   const shrinePhotos = [
-    { src: '/images/gallery/shrine/shrine_1.jpeg', width: 1191, height: 845, alt: 'Shrine View 1', caption: 'Pranic Energy Consecrated Foundation' },
-    { src: '/images/gallery/shrine/shrine_2.jpg', width: 1320, height: 859, alt: 'Shrine View 2', caption: 'Vedic Sacred Geometry Layout' },
-    { src: '/images/gallery/shrine/shrine_3.jpg', width: 1205, height: 847, alt: 'Shrine View 3', caption: 'Pranic Stone & Lime Pillars' }
+    { src: '/images/gallery/shrine/shrine_1.jpeg', width: 1191, height: 845 },
+    { src: '/images/gallery/shrine/shrine_2.jpg', width: 1320, height: 859 },
+    { src: '/images/gallery/shrine/shrine_3.jpg', width: 1205, height: 847 }
   ];
 
-  // Events album photos (populated from user git uploads)
+  // Events album photos
   const eventsPhotos = [
-    { src: '/images/gallery/events/12_years.jpeg', width: 1200, height: 800, alt: 'Events Photo 1', caption: '12 Years Celebration & Milestone' },
-    { src: '/images/gallery/events/IMG_0172.JPG', width: 1920, height: 1080, alt: 'Events Photo 2', caption: 'Annual Vedic Ceremony Gathering' },
-    { src: '/images/gallery/events/IMG_0174.JPG', width: 1569, height: 1080, alt: 'Events Photo 3', caption: 'Community Satsang & Sacred Space Ritual' },
-    { src: '/images/gallery/events/IMG_0400.JPG', width: 1620, height: 1080, alt: 'Events Photo 4', caption: 'Divine Mother Festival Procession' }
+    { src: '/images/gallery/events/12_years.jpeg', width: 1200, height: 800 },
+    { src: '/images/gallery/events/IMG_0172.JPG', width: 1920, height: 1080 },
+    { src: '/images/gallery/events/IMG_0174.JPG', width: 1569, height: 1080 },
+    { src: '/images/gallery/events/IMG_0400.JPG', width: 1620, height: 1080 }
   ];
 
-  // TTC album photos (populated from user git uploads)
+  // TTC album photos
   const ttcPhotos = [
-    { src: '/images/gallery/ttc/disciples.jpg', width: 1400, height: 555, alt: 'TTC Photo 1', caption: 'Dedicated Lineage Holders and Disciples' },
-    { src: '/images/gallery/ttc/ttc.jpeg', width: 1200, height: 595, alt: 'TTC Photo 2', caption: 'Tayi Sadhana Yoga Teacher Training Class' }
+    { src: '/images/gallery/ttc/disciples.jpg', width: 1400, height: 555 },
+    { src: '/images/gallery/ttc/ttc.jpeg', width: 1200, height: 595 }
   ];
 
   const getAlbumPhotos = () => {
@@ -78,11 +78,11 @@ export default function Gallery() {
             >
               <div>
                 <ImagePlaceholder 
-                  width={1200} 
-                  height={800} 
+                  width={400} 
+                  height={300} 
                   src="/images/gallery/events/12_years.jpeg" 
                   alt="Events" 
-                  className="rounded-t-xl" 
+                  className="rounded-t-xl animate-in fade-in duration-300" 
                   objectFit="cover" 
                 />
                 <div className="p-6">
@@ -106,11 +106,11 @@ export default function Gallery() {
             >
               <div>
                 <ImagePlaceholder 
-                  width={1400} 
-                  height={555} 
+                  width={400} 
+                  height={300} 
                   src="/images/gallery/ttc/disciples.jpg" 
                   alt="TTC" 
-                  className="rounded-t-xl" 
+                  className="rounded-t-xl animate-in fade-in duration-300" 
                   objectFit="cover" 
                 />
                 <div className="p-6">
@@ -134,11 +134,11 @@ export default function Gallery() {
             >
               <div>
                 <ImagePlaceholder 
-                  width={1191} 
-                  height={845} 
+                  width={400} 
+                  height={300} 
                   src="/images/gallery/shrine/shrine_1.jpeg" 
                   alt="Shrine Construction" 
-                  className="rounded-t-xl" 
+                  className="rounded-t-xl animate-in fade-in duration-300" 
                   objectFit="cover"
                 />
                 <div className="p-6">
@@ -190,14 +190,9 @@ export default function Gallery() {
                       width={photo.width} 
                       height={photo.height} 
                       src={photo.src} 
-                      alt={photo.alt} 
                       className="rounded-xl overflow-hidden" 
                       objectFit="cover" 
                     />
-                    <div className="mt-3 text-center">
-                      <p className="text-xs font-semibold text-earth uppercase tracking-widest">{photo.alt}</p>
-                      <p className="text-sm font-medium text-ink/80 mt-1">{photo.caption}</p>
-                    </div>
                   </div>
                 ))}
               </div>
@@ -225,7 +220,7 @@ export default function Gallery() {
         <div className="fixed inset-0 z-[60] bg-black/95 flex flex-col justify-between p-4 select-none animate-in fade-in duration-200">
           {/* Header */}
           <div className="flex justify-between items-center text-white p-2">
-            <span className="font-semibold text-sm tracking-wider uppercase">{lightboxIndex + 1} / {currentPhotos.length} — {currentPhotos[lightboxIndex].alt}</span>
+            <span className="font-semibold text-sm tracking-wider uppercase">{lightboxIndex + 1} / {currentPhotos.length}</span>
             <button 
               onClick={() => setLightboxIndex(null)}
               className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors text-xl font-bold"
@@ -246,10 +241,9 @@ export default function Gallery() {
             </button>
 
             {/* The Image */}
-            <div className="max-w-[85vw] max-h-[70vh] flex items-center justify-center p-2">
+            <div className="max-w-[85vw] max-h-[75vh] flex items-center justify-center p-2">
               <img 
                 src={currentPhotos[lightboxIndex].src} 
-                alt={currentPhotos[lightboxIndex].alt} 
                 className="max-w-full max-h-full rounded-lg shadow-2xl object-contain animate-in zoom-in-95 duration-200" 
               />
             </div>
@@ -264,13 +258,7 @@ export default function Gallery() {
             </button>
           </div>
 
-          {/* Caption Footer */}
-          <div className="text-center text-white pb-6 px-4">
-            <p className="text-lg font-serif font-bold text-sand mb-1">{currentPhotos[lightboxIndex].caption}</p>
-            {activeAlbum === 'shrine' && (
-              <p className="text-xs text-white/50">Natural materials — stone, earth, and lime with 0% industrial metal</p>
-            )}
-          </div>
+          <div className="pb-6"></div>
         </div>
       )}
     </div>
