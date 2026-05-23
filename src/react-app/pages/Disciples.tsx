@@ -3,21 +3,6 @@ import ImagePlaceholder from '../components/ImagePlaceholder';
 import { Link } from 'react-router-dom';
 
 export default function Disciples() {
-  const teachers = [
-    { name: 'Teacher Name 1', role: 'Senior Teacher', specialty: 'Hatha Yoga & Meditation' },
-    { name: 'Teacher Name 2', role: 'Nature Cure Specialist', specialty: 'Naturopathy & Wellness' },
-    { name: 'Teacher Name 3', role: 'Philosophy Teacher', specialty: 'Vedanta & Sanskrit' },
-    { name: 'Teacher Name 4', role: 'Advanced Asana', specialty: 'Vinyasa & Alignment' },
-    { name: 'Teacher Name 5', role: 'Pranayama Master', specialty: 'Breathwork & Energy' },
-    { name: 'Teacher Name 6', role: 'Meditation Guide', specialty: 'Mindfulness & Contemplation' },
-    { name: 'Teacher Name 7', role: 'Ayurveda Expert', specialty: 'Herbal Medicine & Diet' },
-    { name: 'Teacher Name 8', role: 'Yoga Therapy', specialty: 'Therapeutic Applications' },
-    { name: 'Teacher Name 9', role: 'Kirtan Leader', specialty: 'Devotional Chanting' },
-    { name: 'Teacher Name 10', role: 'Anatomy Teacher', specialty: 'Body Mechanics & Safety' },
-    { name: 'Teacher Name 11', role: 'Community Coordinator', specialty: 'Service & Events' },
-    { name: 'Teacher Name 12', role: 'Retreat Facilitator', specialty: 'Workshops & Retreats' }
-  ];
-
   return (
     <div>
       <PageHero
@@ -71,26 +56,7 @@ export default function Disciples() {
             </div>
           </div>
 
-          <div className="mb-16">
-            <h2 className="text-3xl font-serif font-bold text-ink text-center mb-12">
-              Meet Our Teachers
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {teachers.map((teacher, index) => (
-                <div key={index} className="bg-gradient-to-br from-sand to-mist rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
-                  <ImagePlaceholder width={400} height={400} text={`Photo: ${teacher.name}`} className="rounded-t-xl" />
-                  <div className="p-6">
-                    <h3 className="text-xl font-serif font-bold text-ink mb-2">{teacher.name}</h3>
-                    <p className="text-sm font-semibold text-earth mb-2">{teacher.role}</p>
-                    <p className="text-sm text-ink/70 mb-4">{teacher.specialty}</p>
-                    <button className="text-earth font-semibold text-sm hover:text-clay transition-colors">
-                      View Profile →
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+
 
           <div className="bg-gradient-to-r from-earth to-clay text-white rounded-2xl p-12">
             <div className="text-center mb-8">
