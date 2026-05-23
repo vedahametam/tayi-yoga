@@ -6,16 +6,26 @@ export default function Gallery() {
   const [activeAlbum, setActiveAlbum] = useState<string | null>(null);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  // Albums data structure
+  // Shrine Construction album photos
   const shrinePhotos = [
     { src: '/images/gallery/shrine/shrine_1.jpeg', width: 1191, height: 845, alt: 'Shrine View 1', caption: 'Pranic Energy Consecrated Foundation' },
     { src: '/images/gallery/shrine/shrine_2.jpg', width: 1320, height: 859, alt: 'Shrine View 2', caption: 'Vedic Sacred Geometry Layout' },
     { src: '/images/gallery/shrine/shrine_3.jpg', width: 1205, height: 847, alt: 'Shrine View 3', caption: 'Pranic Stone & Lime Pillars' }
   ];
 
-  // Placeholder arrays for future uploads (users can populate these)
-  const eventsPhotos: any[] = [];
-  const ttcPhotos: any[] = [];
+  // Events album photos (populated from user git uploads)
+  const eventsPhotos = [
+    { src: '/images/gallery/events/12_years.jpeg', width: 1200, height: 800, alt: 'Events Photo 1', caption: '12 Years Celebration & Milestone' },
+    { src: '/images/gallery/events/IMG_0172.JPG', width: 1920, height: 1080, alt: 'Events Photo 2', caption: 'Annual Vedic Ceremony Gathering' },
+    { src: '/images/gallery/events/IMG_0174.JPG', width: 1569, height: 1080, alt: 'Events Photo 3', caption: 'Community Satsang & Sacred Space Ritual' },
+    { src: '/images/gallery/events/IMG_0400.JPG', width: 1620, height: 1080, alt: 'Events Photo 4', caption: 'Divine Mother Festival Procession' }
+  ];
+
+  // TTC album photos (populated from user git uploads)
+  const ttcPhotos = [
+    { src: '/images/gallery/ttc/disciples.jpg', width: 1400, height: 555, alt: 'TTC Photo 1', caption: 'Dedicated Lineage Holders and Disciples' },
+    { src: '/images/gallery/ttc/ttc.jpeg', width: 1200, height: 595, alt: 'TTC Photo 2', caption: 'Tayi Sadhana Yoga Teacher Training Class' }
+  ];
 
   const getAlbumPhotos = () => {
     if (activeAlbum === 'shrine') return shrinePhotos;
@@ -67,7 +77,14 @@ export default function Gallery() {
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer border border-earth/5 hover:border-earth/20 transform hover:-translate-y-1 flex flex-col justify-between"
             >
               <div>
-                <ImagePlaceholder width={400} height={300} text="Events" className="rounded-t-xl" />
+                <ImagePlaceholder 
+                  width={1200} 
+                  height={800} 
+                  src="/images/gallery/events/12_years.jpeg" 
+                  alt="Events" 
+                  className="rounded-t-xl" 
+                  objectFit="cover" 
+                />
                 <div className="p-6">
                   <h3 className="text-2xl font-serif font-bold text-ink mb-2">Events</h3>
                   <p className="text-ink/70 mb-4">
@@ -88,7 +105,14 @@ export default function Gallery() {
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer border border-earth/5 hover:border-earth/20 transform hover:-translate-y-1 flex flex-col justify-between"
             >
               <div>
-                <ImagePlaceholder width={400} height={300} text="TTC" className="rounded-t-xl" />
+                <ImagePlaceholder 
+                  width={1400} 
+                  height={555} 
+                  src="/images/gallery/ttc/disciples.jpg" 
+                  alt="TTC" 
+                  className="rounded-t-xl" 
+                  objectFit="cover" 
+                />
                 <div className="p-6">
                   <h3 className="text-2xl font-serif font-bold text-ink mb-2">TTC</h3>
                   <p className="text-ink/70 mb-4">
