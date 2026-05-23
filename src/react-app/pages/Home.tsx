@@ -351,18 +351,26 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="bg-sand rounded-xl p-8 shadow-lg flex flex-col">
-                <div className="mb-6">
-                  <ImagePlaceholder width={80} height={80} src={testimonial.imageSrc} text={testimonial.imageText} className="rounded-full flex-shrink-0 object-cover shadow-md" />
+              <div key={testimonial.id} className="bg-white rounded-2xl p-10 shadow-lg flex flex-col border border-sand/80 hover:shadow-xl transition-shadow">
+                {/* Portrait */}
+                <div className="flex justify-center mb-8">
+                  <div className="relative">
+                    <div className="w-24 h-24 rounded-full ring-4 ring-earth/20 ring-offset-4 ring-offset-white overflow-hidden shadow-lg">
+                      <ImagePlaceholder width={96} height={96} src={testimonial.imageSrc} text={testimonial.imageText} className="w-full h-full object-cover" />
+                    </div>
+                  </div>
                 </div>
-                <div className="text-ink/80 font-serif italic leading-relaxed text-base space-y-4 flex-grow mb-8 relative">
+                {/* Testimony */}
+                <div className="text-ink/90 font-serif italic leading-relaxed text-base space-y-4 flex-grow mb-8 relative">
+                  <span className="absolute -top-4 -left-2 text-earth/20 text-6xl font-serif leading-none select-none">"</span>
                   {testimonial.content.split('\n\n').map((paragraph, index) => (
-                    <p key={index}>"{paragraph}"</p>
+                    <p key={index} className="pl-4">{paragraph}</p>
                   ))}
                 </div>
-                <div className="mt-auto border-t border-earth/20 pt-6 text-right">
-                  <h4 className="font-semibold text-ink text-lg">{testimonial.name}</h4>
-                  <p className="text-sm text-ink/60">{testimonial.role}</p>
+                {/* Author */}
+                <div className="mt-auto border-t border-earth/15 pt-6 text-right">
+                  <h4 className="font-semibold text-earth text-lg">{testimonial.name}</h4>
+                  <p className="text-sm text-ink/50">{testimonial.role}</p>
                 </div>
               </div>
             ))}
