@@ -7,8 +7,9 @@ export default function CodeOfDiscipline() {
       <PageHero
         title="Code of Discipline"
         subtitle="Ethical guidelines and professional standards for Tayi Sadhana Yoga teachers"
-        imagePlaceholder="Code of Discipline Hero"
-        height="medium"
+        imageSrc="/images/general/tayi_students.jpeg"
+        imagePosition="object-top"
+        height="large"
       />
 
       <section className="py-20 bg-white">
@@ -26,7 +27,7 @@ export default function CodeOfDiscipline() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <ImagePlaceholder width={600} height={700} text="Ethical Teaching" className="rounded-lg shadow-2xl" />
+              <ImagePlaceholder width={600} height={700} src="/images/general/ethical_teaching.jpeg" alt="Ethical Teaching" className="rounded-lg shadow-2xl" objectFit="contain" objectPosition="center" />
             </div>
             <div>
               <h2 className="text-4xl font-serif font-bold text-ink mb-6">
@@ -260,7 +261,7 @@ export default function CodeOfDiscipline() {
               </div>
             </div>
             <div>
-              <ImagePlaceholder width={600} height={600} text="Personal Practice" className="rounded-lg shadow-2xl" />
+              <ImagePlaceholder width={600} height={600} src="/images/general/personal_practice.jpeg" alt="Personal Practice" className="rounded-lg shadow-2xl" objectFit="contain" objectPosition="center" />
             </div>
           </div>
 
