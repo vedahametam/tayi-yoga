@@ -16,7 +16,7 @@ export default function SadhanaYogi() {
           <div className="flex flex-col lg:flex-row gap-16 mb-16">
             <div className="lg:w-1/3">
               <div className="sticky top-28">
-                <ImagePlaceholder width={500} height={650} text="Yogacharya Hemanth Portrait" className="rounded-2xl shadow-2xl mb-8" />
+                <ImagePlaceholder width={500} height={650} src="/images/general/hv.jpeg" alt="Yogacharya Hemanth Portrait" className="rounded-2xl shadow-2xl mb-8 object-cover" />
                 <div className="bg-sand/30 p-6 rounded-xl border border-earth/10">
                   <h3 className="font-serif text-xl font-bold text-earth mb-3">Lineage & Tradition</h3>
                   <p className="text-ink/80 mb-4 whitespace-nowrap overflow-hidden text-ellipsis">
