@@ -355,13 +355,13 @@ export default function Home() {
                 {/* Portrait */}
                 <div className="flex justify-center mb-8">
                   <div className="relative">
-                    <div className="w-24 h-24 rounded-full ring-4 ring-earth/20 ring-offset-4 ring-offset-white overflow-hidden shadow-lg">
-                      <ImagePlaceholder width={96} height={96} src={testimonial.imageSrc} text={testimonial.imageText} className="w-full h-full object-cover" />
+                    <div className="w-28 h-28 rounded-full ring-4 ring-earth/20 ring-offset-4 ring-offset-white overflow-hidden shadow-lg">
+                      <ImagePlaceholder width={112} height={112} src={testimonial.imageSrc} text={testimonial.imageText} className="w-full h-full object-cover" />
                     </div>
                   </div>
                 </div>
                 {/* Testimony */}
-                <div className="text-ink/90 font-serif italic leading-relaxed text-base space-y-4 flex-grow mb-8 relative">
+                <div className="text-ink leading-relaxed text-base space-y-4 flex-grow mb-8 relative">
                   <span className="absolute -top-4 -left-2 text-earth/20 text-6xl font-serif leading-none select-none">"</span>
                   {testimonial.content.split('\n\n').map((paragraph, index) => (
                     <p key={index} className="pl-4">{paragraph}</p>
