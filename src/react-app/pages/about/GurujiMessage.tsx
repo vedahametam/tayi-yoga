@@ -7,7 +7,7 @@ export default function GurujiMessage() {
         title="Guruji's Message"
         subtitle="Words of wisdom from our spiritual guide"
         imageSrc="/images/general/hv_7.jpeg"
-        imagePosition="object-[center_20%]"
+        imagePosition="object-top"
         height="large"
       />
 

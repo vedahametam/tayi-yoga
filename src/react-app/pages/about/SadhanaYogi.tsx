@@ -8,7 +8,7 @@ export default function SadhanaYogi() {
         title="Yogacharya Hemanth"
         subtitle="Founder of Tayi Sadhana Yoga"
         imageSrc="/images/general/yogacharya_hemanth.jpg"
-        imagePosition="object-[center_20%]"
+        imagePosition="object-top"
         height="large"
       />
 

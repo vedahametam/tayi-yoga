@@ -21,13 +21,19 @@ export default function PageHero({
     large: 'h-[450px] md:h-[550px]'
   };
 
+  const paddingClasses = {
+    small: 'justify-end pb-6 md:pb-8',
+    medium: 'justify-end pb-8 md:pb-12',
+    large: 'justify-end pb-12 md:pb-16'
+  };
+
   return (
     <div className={`relative ${heightClasses[height]} bg-gradient-to-r from-earth to-clay overflow-hidden`}>
       {/* Background image or placeholder */}
       {imageSrc ? (
         <div className="absolute inset-0">
           <img src={imageSrc} alt={imagePlaceholder} className={`w-full h-full object-cover ${imagePosition}`} />
-          <div className="absolute inset-0 bg-ink/40"></div>
+          <div className="absolute inset-0 bg-ink/30"></div>
         </div>
       ) : (
         <div className="absolute inset-0 bg-ink/20 flex items-center justify-center">
@@ -36,15 +42,17 @@ export default function PageHero({
       )}
 
       {/* Content */}
-      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4">
-          {title}
-        </h1>
-        {subtitle && (
-          <p className="text-lg md:text-xl text-mist/90 max-w-3xl">
-            {subtitle}
-          </p>
-        )}
+      <div className={`relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col ${paddingClasses[height]} items-center text-center`}>
+        <div className="bg-ink/35 backdrop-blur-sm px-6 py-5 md:px-10 md:py-7 rounded-2xl max-w-3xl mx-auto border border-white/10 shadow-xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-2 leading-tight">
+            {title}
+          </h1>
+          {subtitle && (
+            <p className="text-sm md:text-base lg:text-lg text-mist/95 font-medium">
+              {subtitle}
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );
