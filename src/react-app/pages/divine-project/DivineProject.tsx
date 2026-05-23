@@ -7,8 +7,9 @@ export default function DivineProject() {
       <PageHero
         title="Divine Project"
         subtitle="The Universal Mother and the Source of All Life"
-        imagePlaceholder="Divine Project Hero Image"
-        height="medium"
+        imageSrc="/images/general/yoga_mandira.jpg"
+        imagePosition="object-center"
+        height="large"
       />
 
       <section className="py-20 bg-white">
@@ -20,7 +21,7 @@ export default function DivineProject() {
               </p>
 
               <div className="flex justify-center mb-8 mt-8">
-                 <ImagePlaceholder width={600} height={400} text="Divine Mother Shrine" className="rounded-xl shadow-xl" />
+                 <ImagePlaceholder width={600} height={400} src="/images/general/construction_design.jpg" alt="Divine Mother Shrine" className="rounded-xl shadow-xl object-cover" />
               </div>
 
               <p className="text-lg text-ink/80 mb-6 leading-relaxed">
