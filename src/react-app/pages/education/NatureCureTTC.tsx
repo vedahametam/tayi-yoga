@@ -8,7 +8,7 @@ export default function NatureCureTTC() {
         title="Sadhana Nature Cure TTC"
         subtitle="Teacher Training Course Overview"
         imageSrc="/images/general/tayi_culture.jpeg"
-        imagePosition="object-top"
+        imagePosition="object-[center_20%]"
         height="large"
       />
 
