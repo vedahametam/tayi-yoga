@@ -7,14 +7,13 @@ export default function GurujiMessage() {
       <PageHero
         title="Guruji's Message"
         subtitle="Words of wisdom from our spiritual guide"
-        imagePlaceholder="Guruji Hero Image"
+        imageSrc="/images/general/hv_7.jpeg"
         height="medium"
       />
 
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <ImagePlaceholder width={300} height={300} src="/images/general/hv_7.jpeg" text="Guruji Portrait" className="rounded-full mx-auto mb-6 shadow-2xl object-contain bg-sand/30" />
             <h2 className="text-3xl font-serif font-bold text-ink mb-2">
               Yogacharya Hemanth
             </h2>
