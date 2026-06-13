@@ -7,7 +7,7 @@ export default function NatureCureTTC() {
       <PageHero
         title="Sadhana Nature Cure TTC"
         subtitle="Teacher Training Course Overview"
-        imageSrc="/images/general/tayi_culture.jpeg"
+        imageSrc="/images/heroes/sadhana_nc_hero.jpg"
         imagePosition="object-[center_20%]"
         height="large"
       />

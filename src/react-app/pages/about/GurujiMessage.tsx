@@ -6,7 +6,7 @@ export default function GurujiMessage() {
       <PageHero
         title="Guruji's Message"
         subtitle="Words of wisdom from our spiritual guide"
-        imageSrc="/images/general/hv_7.jpeg"
+        imageSrc="/images/heroes/gm_hero.jpg"
         imagePosition="object-top"
         height="large"
       />

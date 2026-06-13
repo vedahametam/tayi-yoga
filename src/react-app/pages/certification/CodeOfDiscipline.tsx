@@ -7,7 +7,7 @@ export default function CodeOfDiscipline() {
       <PageHero
         title="Code of Discipline"
         subtitle="Ethical guidelines and professional standards for Tayi Sadhana Yoga teachers"
-        imageSrc="/images/general/tayi_students.jpeg"
+        imageSrc="/images/heroes/code_discipline_hero.jpg"
         imagePosition="object-top"
         contentPosition="top"
         height="large"
