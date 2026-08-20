@@ -53,12 +53,13 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-earth mb-2">Visit Us</h3>
-                    <p className="text-ink/70">
-                      Tayi Sadhana Yoga Ashram<br />
-                      [Address Line 1]<br />
-                      [City, State, PIN Code]<br />
-                      India
-                    </p>
+                    <div className="text-ink/70 leading-relaxed">
+                      <div className="font-bold text-ink">TAYI SĀDHANA YOGA</div>
+                      <div>Yoga Master Hemanth</div>
+                      <div>No. 153, 6th Cross, Gokulam</div>
+                      <div>Mysuru, Karnataka, India</div>
+                      <div className="text-sm text-ink/60">2nd Floor, Doctor Corner</div>
+                    </div>
                   </div>
                 </div>
 
@@ -69,11 +70,9 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-leaf mb-2">Call Us</h3>
+                    <h3 className="font-semibold text-leaf mb-2">Call & WhatsApp</h3>
                     <p className="text-ink/70">
-                      Phone: +91 [Phone Number]<br />
-                      WhatsApp: +91 [WhatsApp Number]<br />
-                      Available: 9 AM - 6 PM IST
+                      WhatsApp: <a href="https://wa.me/918762120909" target="_blank" rel="noopener noreferrer" className="hover:text-leaf transition-colors font-medium">+91 87621 20909</a>
                     </p>
                   </div>
                 </div>
@@ -87,9 +86,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-clay mb-2">Email Us</h3>
                     <p className="text-ink/70">
-                      General: info@tayiyoga.org<br />
-                      Admissions: admissions@tayiyoga.org<br />
-                      Donations: donate@tayiyoga.org
+                      Email: <a href="mailto:hemanth@tayi.yoga" className="hover:text-clay transition-colors font-medium">hemanth@tayi.yoga</a>
                     </p>
                   </div>
                 </div>
